@@ -23,16 +23,16 @@
             </ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" FontWeight="Bold">Formulario</Label>
-        <Border BorderThickness="1" Margin="10" BorderBrush="Black" Grid.Row="1" Grid.Column="0" Background="Aqua" Grid.ColumnSpan="2">
+        <Label Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" FontWeight="Bold">Formulario</Label>
+        <Border BorderThickness="1" Margin="10" BorderBrush="Black" Grid.Row="1" Grid.Column="0" Background="Aqua" Grid.ColumnSpan="2" CornerRadius="3">
             <Border.Effect>
                 <DropShadowEffect/>
             </Border.Effect>
-            <Grid Grid.Row="2" Grid.Column="0" Height="80">
+            <Grid Height="80">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="65"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition Width="30"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
@@ -42,21 +42,19 @@
                 <Label Grid.Row="0" Grid.Column="0" Margin="2">Nombre</Label>
                 <TextBox Grid.Row="0" Grid.Column="1" Margin="2"></TextBox>
                 <Image Grid.Row="0" Grid.Column="2" ToolTip="Máximo 10 caracteres" Source="info.png" Margin="2"/>
-
                 <Label Grid.Row="1" Grid.Column="0" Margin="2">Edad</Label>
                 <TextBox Grid.Row="1" Grid.Column="1" Margin="2"></TextBox>
                 <Image Grid.Row="1" Grid.Column="2" ToolTip="Número entero entre 0 y 100" Source="info.png" Margin="2"/>
-
                 <Label Grid.Row="2" Grid.Column="0" Margin="2">Dirección</Label>
                 <TextBox Grid.Row="2" Grid.Column="1" Margin="2"></TextBox>
                 <Image Grid.Row="2" Grid.Column="2" ToolTip="Incluir el código postal" Source="info.png" Margin="2"/>
             </Grid>
         </Border>
-        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="0" Margin="8" Grid.ColumnSpan="2" Background="Yellow">
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="0" Margin="8" Grid.ColumnSpan="2" Background="Yellow" CornerRadius="3">
             <Border.Effect>
                 <DropShadowEffect/>
             </Border.Effect>
-            <Grid Grid.Row="2" Grid.Column="0" Height="90">
+            <Grid Height="90">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="200"></ColumnDefinition>
                     <ColumnDefinition Width="200"></ColumnDefinition>
@@ -83,14 +81,13 @@
                 </GroupBox>
             </Grid>
         </Border>
-
         <Image Grid.Row="1" Grid.Column="2" Grid.RowSpan="3" Source="foto.jpg" Stretch="Fill" Margin="0,0,10,0"/>
         <Label Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="20">Sergio Sempere Molina</Label>
-        <DockPanel Grid.Column="2" Grid.Row="4">
-            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="Aceptar" Width="100" Margin="10"></Button>
-                <Button Content="Cancelar" Width="100" Margin="10"></Button>
-            </StackPanel>
-        </DockPanel>
+
+        <StackPanel  Grid.Column="2" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Aceptar" Width="100" Margin="10"></Button>
+            <Button Content="Cancelar" Width="100" Margin="10"></Button>
+        </StackPanel>
+
     </Grid>
 </Window>
